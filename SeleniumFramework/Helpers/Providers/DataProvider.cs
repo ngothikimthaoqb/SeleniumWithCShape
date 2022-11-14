@@ -9,7 +9,7 @@ namespace SeleniumFramework.Helpers.Providers
             return JsonConvert.DeserializeObject<T>(File.ReadAllText(Path.Combine(AppDomain
                 .CurrentDomain
                 .BaseDirectory,
-                $@"..\..\..\..\Data\{filename}.json")));
+                $@"..\..\..\Data\{filename}.json")));
         }
 
         public static T LoadXMLFile<T>(string filename)

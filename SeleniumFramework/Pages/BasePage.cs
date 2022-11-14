@@ -2,14 +2,20 @@
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using SeleniumFramework.Providers;
+using EC = SeleniumExtras.WaitHelpers.ExpectedConditions;
 using Nest;
-using SeleniumFramework.Tests;
+using OpenQA.Selenium.Html5;
+using AngleSharp.Dom;
+using System.Threading;
+using NUnit.Allure.Core;
 
 namespace SeleniumFramework.Pages
 {
+    [TestFixture]
+    [AllureNUnit]
     public abstract class BasePage
     {
-        public static IWebDriver Driver { get; private set; }
+        protected IWebDriver Driver { get; private set; }
         protected WebDriverWait Wait { get; private set; }
         public BasePage(IWebDriver driver)
         {
@@ -18,12 +24,19 @@ namespace SeleniumFramework.Pages
             PageFactory.InitElements(driver, this);
 
         }
-
-
-        public void InputField(IWebElement el, string value)
+        protected void WaitUntilElementEnabled(IWebElement el, int timeout)
         {
-            el.Clear();
-            el.SendKeys(value);
+            try 
+            {
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeout));
+                wait.Until(ExpectedConditions.ElementToBeClickable(el));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+           
         }
+      
     }
 }

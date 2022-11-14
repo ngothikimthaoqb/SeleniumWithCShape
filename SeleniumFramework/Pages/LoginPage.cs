@@ -25,13 +25,17 @@ namespace SeleniumFramework.Pages
 
         public void Login(User user)
         {
-            InputField(UserNameField, user.Email);
-            InputField(PasswordField, user.Password);
+            WaitUntilElementEnabled(UserNameField, 5);
+            UserNameField.SendKeys(user.Email);
+            PasswordField.Click();
+            PasswordField.SendKeys(user.Password);
             SignInButton.Click();
+
         }
 
         public void VerifyLoginSuccessfully(User user)
         {
+            WaitUntilElementEnabled(ProfileName, 5);
             string userNameActual = ProfileName.Text;
             Assert.AreEqual(user.UserName, userNameActual);
         }

@@ -9,7 +9,7 @@ namespace SeleniumFramework.Pages
     {
 
         [FindsBy(How = How.Id, Using = "h-sign-in")]
-        public IWebElement SignInLink { get; set; }
+        private IWebElement SignInLink { get; set; }
 
         private static string HomePageTitle = "Oxford Leaner's Dictionaries";
         private static string SignInPageTitle = "Sign in | Oxford University Press ";
@@ -27,7 +27,7 @@ namespace SeleniumFramework.Pages
             Driver.Navigate().GoToUrl(HomePageUrl);
         }
 
-        internal bool IsPageTitleCorrect() => Driver.Title.Equals(HomePageTitle);
+        internal bool IsPageTitleCorrect() => Driver.Title.Equals(HomePageTitle + "jdnckdnk");
         internal bool IsSignInPageTitleCorrect() => Driver.Title.Equals(SignInPageTitle);
 
 

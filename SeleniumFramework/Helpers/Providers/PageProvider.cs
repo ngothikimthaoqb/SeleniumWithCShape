@@ -1,12 +1,26 @@
-﻿using SeleniumExtras.PageObjects;
-using SeleniumFramework.Pages;
-using SeleniumFramework.Tests;
+﻿using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Helpers.Providers
 {
     public static class PageProvider
     {
-        public static HomePage Home= new HomePage(BaseTest.Driver);
-        public static LoginPage Login = new LoginPage(BaseTest.Driver);
+        public static HomePage Home
+        {
+            get
+            {
+                var Home = new HomePage(WebDriverFactory.driver);
+                return Home;
+            }
+        }
+
+        public static LoginPage Login
+        {
+            get
+            {
+                var Login = new LoginPage(WebDriverFactory.driver);
+                return Login;
+            }
+        }
+      
     }
 }
