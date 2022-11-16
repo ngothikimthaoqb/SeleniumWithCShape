@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+	<GenerateRuntimeConfigDevFile>true</GenerateRuntimeConfigDevFile>
+	<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
   </PropertyGroup>
 
   <ItemGroup>
