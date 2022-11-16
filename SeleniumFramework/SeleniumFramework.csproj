@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
+	<InvariantGlobalization>true</InvariantGlobalization>
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,7 +36,6 @@
     <Folder Include="AllureResults\" />
     <Folder Include="AllureReports\" />
     <Folder Include="CoverageHistory\" />
-    <Folder Include="UnitTestResults\" />
     <Folder Include="ScreenShots\" />
   </ItemGroup>
 
