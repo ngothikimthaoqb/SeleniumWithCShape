@@ -37,9 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AllureResults\" />
-    <Folder Include="AllureReports\" />
-    <Folder Include="ScreenShots\" />
+    <Folder Include="Configurations\AllureReports\" />
+    <Folder Include="Screenshots\" />
   </ItemGroup>
 
 </Project>
