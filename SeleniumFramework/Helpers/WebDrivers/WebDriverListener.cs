@@ -9,9 +9,9 @@ namespace SeleniumFramework.Helpers.WebDrivers
     {
         private readonly IWebDriver driver;
 
-        private readonly NUnit.Framework.Internal.Logger logger;
+        private readonly Logger logger;
 
-        public WebDriverListener(IWebDriver parentDriver, NUnit.Framework.Internal.Logger logger) : base(parentDriver)
+        public WebDriverListener(IWebDriver parentDriver, Logger logger) : base(parentDriver)
         {
             driver = parentDriver;
             this.logger = logger;

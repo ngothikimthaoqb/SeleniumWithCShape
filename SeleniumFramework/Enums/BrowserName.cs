@@ -11,6 +11,6 @@ namespace SeleniumFramework.Enums
         Chrome,
         Firefox,
         Edge,
-        IE
+        InternetExlorer
     }
 }

@@ -33,7 +33,7 @@ namespace SeleniumFramework.Helpers
                     driver = new WebDriverListener(firefoxDriver, logger);
                     break;
 
-                case BrowserName.IE:
+                case BrowserName.InternetExlorer:
                     new DriverManager().SetUpDriver(new InternetExplorerConfig());
                     var ieDriver = new InternetExplorerDriver(WebDriverSettings.InternetExplorerOptions());
                     driver = new WebDriverListener(ieDriver, logger);

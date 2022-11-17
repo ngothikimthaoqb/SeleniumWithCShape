@@ -2,11 +2,6 @@
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using SeleniumFramework.Providers;
-using EC = SeleniumExtras.WaitHelpers.ExpectedConditions;
-using Nest;
-using OpenQA.Selenium.Html5;
-using AngleSharp.Dom;
-using System.Threading;
 using NUnit.Allure.Core;
 
 namespace SeleniumFramework.Pages

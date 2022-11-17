@@ -2,9 +2,9 @@
 
 namespace SeleniumFramework.Helpers
 {
-    public class ScreenShot
+    public class ScreenshotTaker
     {
-        public void CaptureScreenShot(string fileName, IWebDriver driver)
+        public void CaptureScreenshot(string fileName, IWebDriver driver)
         {
             try
             {

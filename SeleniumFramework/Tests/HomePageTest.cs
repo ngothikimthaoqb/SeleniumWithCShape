@@ -2,11 +2,13 @@
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using SeleniumFramework.Helpers.Providers;
-using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
 {
+    [AllureDisplayIgnored]
     [AllureSuite("HomePageTest")]
+    [TestFixture]
+    [AllureNUnit]
     public class HomePageTest: BaseTest
     {
         [Test]
@@ -15,8 +17,8 @@ namespace SeleniumFramework.Tests
         [AllureFeature("Core")]
         public void VerifyNavigationToLoginPage()
         {
-
             PageProvider.Home.NavigartionToLoginPage();
+            Assert.AreEqual(true, PageProvider.Home.IsSignInPageTitleCorrect(), "You can not navigate to homepage");
         }
 
         [Test]
@@ -26,7 +28,7 @@ namespace SeleniumFramework.Tests
         public void VerifyHomePageIsOpened()
         {
 
-            Assert.AreEqual(true, PageProvider.Home.IsPageTitleCorrect()) ;
+            Assert.AreEqual(true, PageProvider.Home.IsPageTitleCorrect(), "The title is not correct") ;
         }
 
     }
